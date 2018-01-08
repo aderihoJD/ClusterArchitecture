@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Test socket.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var connect_error_count = 0;
+
+
+        var socket = io.connect('http://localhost:3000/',
+            {
+                'reconnectionDelay': 10 // defaults to 500
+            }
+        );
+
+
+
+        socket.on('connect_error', function(){
+            console.log('Connection Failed');
+            //Если более 5 попыток переподключения, то отключаем подключение
+            connect_error_count++;
+            if (connect_error_count>=5){
+                socket.disconnect();
+                console.log("stop reconection");
+            }
+        });
+
+
+
+        socket.on('reconnect', function(){
+            console.log('reconnect');
+            connect_error_count=0;
+        });
+
+
+        socket.on('news', function (data) {
+            console.log(data);
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

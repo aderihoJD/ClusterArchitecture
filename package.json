@@ -1,0 +1,28 @@
+{
+  "name": "clusterarchitecture",
+  "version": "1.0.1",
+  "description": "Cluster + Express + Socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aderihoJD/ClusterArchitecture.git"
+  },
+  "author": "Ilyas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aderihoJD/ClusterArchitecture/issues"
+  },
+  "homepage": "https://github.com/aderihoJD/ClusterArchitecture#readme",
+  "dependencies": {
+    "babel-plugin-object-values-to-object-keys": "^1.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "cluster": "^0.7.7",
+    "express": "^4.16.2",
+    "os": "^0.1.1",
+    "socket.io": "^2.0.4"
+  }
+}
